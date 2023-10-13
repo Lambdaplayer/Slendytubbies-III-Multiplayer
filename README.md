@@ -32,15 +32,15 @@ Currently Implements The Following Weapons:
  ![gm_lambda_dev0037](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/7bdb9409-9835-482e-b289-b61b859eba37)
 
 # -Slendytubbies III TubbyCustard
--how The TubbyCustard works?
+- how The TubbyCustard works?
 On pressing E It Will You Give More Health
 ![gm_lambda_dev0038](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/0be6e505-4499-42f4-9e06-82eaa110be27)
 
 # -Convars
--Rebalance Weapons
--Alternative Katana snds
--Allow motivation[Zeta Katana Motivated Sound]
--Allow BackStab
+- Rebalance Weapons
+- Alternative Katana snds
+- Allow motivation[Zeta Katana Motivated Sound]
+- Allow BackStab
 
 # -Credits
 - IcyStarfrost Creating lambda players
@@ -53,4 +53,4 @@ On pressing E It Will You Give More Health
 
 
  "Thanks And Have Fun"
--Gaben Newell
+- Gaben Newell
