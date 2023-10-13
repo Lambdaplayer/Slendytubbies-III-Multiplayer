@@ -19,7 +19,9 @@ Currently Implements The Following Weapons:
 - M249 Saw
 - MK18
 - M40a1
+
 ![gm_lambda_dev0036](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/511cc07c-24f1-4998-b4ff-7d322fa1ff6d)
+
 
  # -The Unused Weapons
  Currently Unused Weapons
@@ -29,6 +31,7 @@ Currently Implements The Following Weapons:
  - M4
  - Grenade
  - Grenade Launcher
+
  ![gm_lambda_dev0037](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/7bdb9409-9835-482e-b289-b61b859eba37)
 
 # -Slendytubbies III TubbyCustard
