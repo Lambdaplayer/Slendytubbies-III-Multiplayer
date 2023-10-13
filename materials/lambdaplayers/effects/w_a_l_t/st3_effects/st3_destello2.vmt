@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture" "lambdaplayers/effects/w_a_l_t/st3_effects/st3_destello2"
+	$vertexcolor 1
+	$vertexalpha 1
+	$translucent 1
+	$Additive 1
+}
