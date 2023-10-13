@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "lambdaplayers/killicons/icon_st3_blaser"
+	$translucent "1"
+	$vertexcolor "1"
+	$vertexalpha "1"
+}
