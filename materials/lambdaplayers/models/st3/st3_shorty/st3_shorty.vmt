@@ -1,0 +1,15 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "lambdaplayers/models/st3/st3_shorty/st3_shorty"
+	"$bumpmap" "lambdaplayers/models/st3/st3_shorty/st3_shorty_n"
+
+	"$phong" "1"
+	"$phongboost" "1.5"
+	"$phongexponent" "90"
+	"$phongfresnelranges"	"[.1 .5 1]"
+
+	
+	"$rimlight" "1"
+	"$rimlightboost" "1.1"
+	"$rimlightexponent" "3"
+}
