@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "lambdaplayers/models/st3/st3_rpg/st3_rpg" 
+	"$bumpmap" "lambdaplayers/models/st3/st3_rpg/st3_rpg_n"
+	"$lightwarptexture" "lambdaplayers/models/st3/st3_rpg/st3_lightwarp"
+	"$phong" "1"
+	"$phongboost" "0.5"
+	"$phongexponent" "9"
+	"$phongfresnelranges"	"[.1 .5 1]"
+
+	
+	"$rimlight" "1"
+	"$rimlightboost" "0.2"
+	"$rimlightexponent" "12"
+}

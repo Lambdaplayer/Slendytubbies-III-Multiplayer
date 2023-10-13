@@ -1,0 +1,10 @@
+"UnLitGeneric"
+{
+	"$basetexture" "models/w_a_l_t/st3_weapons/st3_xix2/st3_xix2_scope" 
+	"$emissiveBlendEnabled" "1"
+	"$emissiveBlendTexture" "vgui\white"
+	"$emissiveBlendBaseTexture" "models/w_a_l_t/st3_weapons/st3_xix2/st3_xix2_scope_rdot_light"
+	"$emissiveBlendTint" "[1 4 1 ]"
+	"$emissiveBlendStrength" "1.0"
+	"$emissiveBlendScrollVector" "[0 0]"
+}

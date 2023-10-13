@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/w_a_l_t/st3_weapons/st3_xix/extra/st3_xix_worldmodel_accurate" 
+	"$bumpmap" "models/w_a_l_t/st3_weapons/st3_xix/extra/st3_xix_worldmodel_accurate_n" 
+
+	"$phong" "1"
+	"$phongboost" "1.5"
+	"$phongexponent" "70"
+	"$phongfresnelranges"	"[.1 .5 1]"
+
+	"$emissiveBlendEnabled" "1"
+	"$emissiveBlendTexture" "vgui\white"
+	"$emissiveBlendBaseTexture" "models/w_a_l_t/st3_weapons/st3_xix/extra/st3_xix_worldmodel_accurate_lights"
+	"$emissiveBlendTint" "[1 4 1 ]"
+	"$emissiveBlendStrength" ".5"
+	"$emissiveBlendScrollVector" "[0 0]"
+	
+	"$rimlight" "1"
+	"$rimlightboost" "0.2"
+	"$rimlightexponent" "40"
+}

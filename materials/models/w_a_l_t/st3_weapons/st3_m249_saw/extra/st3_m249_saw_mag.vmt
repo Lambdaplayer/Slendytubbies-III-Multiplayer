@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/w_a_l_t/st3_weapons/st3_m249_saw/extra/st3_m249_saw_mag" 
+	"$bumpmap" "models/w_a_l_t/st3_weapons/st3_m249_saw/extra/st3_m249_saw_mag_n" 
+
+	"$phong" "1"
+	"$phongboost" "1.0"
+	"$phongexponent" "56"
+	"$phongfresnelranges"	"[.1 .5 1]"
+
+	
+	"$rimlight" "1"
+	"$rimlightboost" "0.2"
+	"$rimlightexponent" "45"
+}
