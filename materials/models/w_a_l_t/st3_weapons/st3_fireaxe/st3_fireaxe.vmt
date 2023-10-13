@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/w_a_l_t/st3_weapons/st3_fireaxe/st3_fireaxe" 
+	"$bumpmap" "models/w_a_l_t/st3_weapons/st3_fireaxe/st3_fireaxe_n" 
+
+	"$phong" "1"
+	"$phongboost" "0.7"
+	"$phongexponent" "65"
+	"$phongfresnelranges"	"[.1 .5 1]"
+
+	
+	"$rimlight" "1"
+	"$rimlightboost" "0.2"
+	"$rimlightexponent" "35"
+}

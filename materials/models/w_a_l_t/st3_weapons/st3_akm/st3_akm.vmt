@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/w_a_l_t/st3_weapons/st3_akm/st3_akm"
+	"$bumpmap" "models/w_a_l_t/st3_weapons//st3_akm/st3_akm_n"
+
+	"$phong" "1"
+	"$phongboost" "0.2"
+	"$phongexponent" "95"
+	"$phongfresnelranges"	"[.1 .5 1]"
+	
+	
+	"$rimlight" "1"
+	"$rimlightboost" "0.2"
+	"$rimlightexponent" "45"
+	
+	"$nocull" "1"
+}

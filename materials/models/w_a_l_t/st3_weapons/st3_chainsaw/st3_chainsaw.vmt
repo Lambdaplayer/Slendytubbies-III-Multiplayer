@@ -1,0 +1,15 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/w_a_l_t/st3_weapons/st3_chainsaw/st3_chainsaw"
+	"$bumpmap" "models/w_a_l_t/st3_weapons/st3_chainsaw/st3_chainsaw_n"
+
+	"$phong" "1"
+	"$phongboost" "1.2"
+	"$phongexponent" "5"
+	"$phongfresnelranges"	"[.1 .5 1]"
+	
+	
+	"$rimlight" "1"
+	"$rimlightboost" "1.0"
+	"$rimlightexponent" "5"
+}

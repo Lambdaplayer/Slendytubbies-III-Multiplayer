@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/v_st3_mp/mp_unused"
+	"$bumpmap" "models/weapons/v_st3_mp/mp_unused_norm"
+                "$selfillummask" "models/weapons/v_st3_mp/illum"
+                "$selfillum" "1"
+	"$phong" "1"
+	"$AmbientOcclusion" "0"
+	"$halflambert" "1"
+	"$phongexponent" "40"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[ 0.5 0.6 2 ]"
+	"$rimlight" "1"
+	"$rimlightexponent" "10"
+	"$rimlightboost" ".1"
+}

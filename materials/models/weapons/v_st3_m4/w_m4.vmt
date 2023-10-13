@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/v_st3_m4/w_m4"
+	"$bumpmap" "models/weapons/v_st3_m4/norm"
+	"$phong" "1"
+	"$AmbientOcclusion" "0"
+	"$halflambert" "1"
+	"$phongexponent" "40"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[ 0.5 0.6 2 ]"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .02 .02 .02]"
+	"$rimlight" "1"
+	"$rimlightexponent" "10"
+	"$rimlightboost" ".1"
+}
