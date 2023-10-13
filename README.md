@@ -44,7 +44,7 @@ how The TubbyCustard works? On pressing E It Will You Give More Health
 # -Credits
 - IcyStarfrost Creating lambda players
 - ZeoWorks(Sean) Creating Slendytubbies III Multiplayer
-- W A L T E N Creating the Model textures and lua Weapons
+- W A L T E N Creating the Model textures and lua Weapons[TFA Weapons]
 - PainKiller67 Creating Beta/Dev Weapons
 - Male-07(me) Creating the addon And Everything incluid The Grenade Entity 
 ![lfe_devtest0001](https://github.com/Lambdaplayer/Lambdaplayer-Slendytubbies-3-Multiplayer-Weapons-Pack/assets/140025609/3466114d-c00f-4c50-9eee-af61bf5ca754)
