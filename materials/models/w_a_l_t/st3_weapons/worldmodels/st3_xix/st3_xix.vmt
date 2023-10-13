@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/w_a_l_t/st3_weapons/worldmodels/st3_xix/st3_xix" 
+	"$bumpmap" "models/w_a_l_t/st3_weapons/worldmodels/st3_xix/st3_xix_n" 
+
+	"$phong" "1"
+	"$phongboost" "1.5"
+	"$phongexponent" "90"
+	"$phongfresnelranges"	"[.1 .5 1]"
+
+	
+	"$rimlight" "1"
+	"$rimlightboost" "1.1"
+	"$rimlightexponent" "3"
+}
