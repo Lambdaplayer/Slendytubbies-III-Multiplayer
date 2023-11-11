@@ -19,9 +19,7 @@ Currently Implements The Following Weapons:
 - M249 Saw
 - MK18
 - M40a1
-
-![gm_lambda_dev0036](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/511cc07c-24f1-4998-b4ff-7d322fa1ff6d)
-
+![gm_lambda_dev0036](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/f0f204b0-2b36-4896-b0e9-10eb8e6281fb)
 
  # -The Unused Weapons
  Currently Unused Weapons
@@ -31,18 +29,23 @@ Currently Implements The Following Weapons:
  - M4
  - Grenade
  - Grenade Launcher
+![gm_lambda_dev0037](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/abce2897-fab3-45c7-9149-735446f4a58b)
 
- ![gm_lambda_dev0037](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/7bdb9409-9835-482e-b289-b61b859eba37)
+
 
 # -Slendytubbies III TubbyCustard
 how The TubbyCustard works? On pressing E It Will You Give More Health
-![gm_lambda_dev0038](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/0be6e505-4499-42f4-9e06-82eaa110be27)
+![gm_lambda_dev0038](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/cb371788-c809-4193-876f-4678c38ad02e)
+
 
 # -Convars
 - Rebalance Weapons
-- Alternative Katana snds
-- Allow motivation[Zeta Katana Motivated Sound]
+- Alternative Katana snds[REPLACED FOR HYPE]
+- Allow motivation[Zeta Katana Motivated Sound] [REMOVED]
 - Allow BackStab
+- Katana - Block Zeta SFX'S
+- Katana - Block Damage
+- Katana - Hype
 
 # -Credits
 - IcyStarfrost Creating lambda players
