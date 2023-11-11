@@ -39,13 +39,25 @@ local ignorePlys = GetConVar( "ai_ignoreplayers" )
 
 LAMBDA_ST3 = LAMBDA_ST3 or {}
 
-ST_DMG_CUSTOM_BACKSTAB                  = 512
+util.AddNetworkString( "lambda_st3_dispatchcolorparticle" )
+util.AddNetworkString( "lambda_st3_stopnamedparticle" )
 
 function LAMBDA_ST3:IsBehindBackstab( ent, target )
     local vecToTarget = ( target:GetPos() - ent:GetPos() ); vecToTarget.z = 0; vecToTarget:Normalize()
     local vecOwnerForward = ent:GetForward(); vecOwnerForward.z = 0; vecOwnerForward:Normalize()
     local vecTargetForward = target:GetForward(); vecTargetForward.z = 0; vecTargetForward:Normalize()
     return ( vecToTarget:Dot( vecTargetForward ) > 0 and vecToTarget:Dot( vecOwnerForward ) > 0.5 and vecTargetForward:Dot( vecOwnerForward ) > -0.3 )
+end
+
+function LAMBDA_ST3:StopParticlesNamed( ent, name )
+    if ( SERVER ) then
+        net.Start( "lambda_st3_stopnamedparticle" )
+            net.WriteEntity( ent )
+            net.WriteString( name )
+        net.Broadcast()
+    else
+        ent:StopParticlesNamed( name )
+    end
 end
 
 local calcMoveTrTbl = {}
@@ -88,13 +100,13 @@ function LAMBDA_ST3:InitializeWeaponData( lambda, weapon )
         weapon:SetBodygroup( bg.id, 0 )
     end
 
-    weapon.l_ST_CritTime = CurTime()
+    --weapon.l_ST_CritTime = CurTime()
     weapon.l_ST_LastFireTime = CurTime()
     weapon.l_ST_LastRapidFireCritCheckT = CurTime()
 
     weapon.SetWeaponAttribute = SetWeaponAttribute
     weapon.GetWeaponAttribute = GetWeaponAttribute
-    weapon.CalcIsAttackCriticalHelper = CalcIsAttackCriticalHelper
+    --weapon.CalcIsAttackCriticalHelper = CalcIsAttackCriticalHelper
 end
 
 function LAMBDA_ST3:RadiusDamageInfo( dmginfo, pos, radius, impactEnt, ignoreEnt )
@@ -160,4 +172,28 @@ function LAMBDA_ST3:RadiusDamageInfo( dmginfo, pos, radius, impactEnt, ignoreEnt
             ent:TakeDamageInfo( dmginfo )
         end
     end
+end
+
+function LAMBDA_ST3:DispatchColorParticle( ent, effect, partAttachment, entAttachment, color, reverseOrder )
+    net.Start( "lambda_st3_dispatchcolorparticle" )
+        net.WriteEntity( ent )
+        net.WriteString( effect )
+        
+        net.WriteUInt( partAttachment, 3 )
+        if partAttachment == PATTACH_WORLDORIGIN then
+            net.WriteVector( entAttachment )
+        else
+            net.WriteUInt( entAttachment, 6 )
+        end
+
+        net.WriteBool( reverseOrder or false )
+        
+        if !color or isnumber( color ) then
+            net.WriteBool( false )
+            net.WriteUInt( color or 0, 2 )
+        else
+            net.WriteBool( true )
+            net.WriteVector( color )
+        end
+    net.Broadcast()
 end
