@@ -1,7 +1,7 @@
 # [Lambdaplayers]Slendytubbies III Multiplayer Weapons Pack
 This add 19 Weapons For Lambda player note, this not &100 Accurate Or Some Weapons are not
 
-# -**MUST REQUIRES EMANA'S/YERMASH LAMBDA PLAYERS FORK
+# -**MUST REQUIRES EMANA'S/YERMASH LAMBDA PLAYERS FORK**
 https://github.com/Emana202/Lambda-Players
 
 # -The Implemented Weapons
