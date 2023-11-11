@@ -38,7 +38,8 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
                 isBackstab = ( los:GetNormalized():Dot( targetFwd ) > 0.75 )
             end
 
-            local slashDmg = ( isBackstab and 195 or ( ( ( CurTime() - self.l_WeaponUseCooldown ) > 0.4 ) and 20 or 15 ) )
+            local slashSnd = "LambdaST3.Weapon_Knife." .. ( isBackstab and "Stab" or "Hit" )
+            local slashDmg = ( isBackstab and 2193 or ( ( ( CurTime() - self.l_WeaponUseCooldown ) > 0.4 ) and 20 or 15 ) )
             local dmginfo = DamageInfo() 
             dmginfo:SetDamage( slashDmg )
             dmginfo:SetAttacker( self )
@@ -46,11 +47,12 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
             dmginfo:SetDamageType( DMG_SLASH )
             dmginfo:SetDamageForce( ( target:WorldSpaceCenter() - self:WorldSpaceCenter() ):GetNormalized() * slashDmg )
             target:TakeDamageInfo( dmginfo )
+            wepent:EmitSound( slashSnd )
 
             self.l_WeaponUseCooldown = ( CurTime() + ( isBackstab and 1.1 or 0.5 ) )
             wepent:EmitSound( "lambdaplayers/weapons/SlendytubbiesSFX's/knife/st3_knife_swing.wav", 110 )
 
-            target:EmitSound( "lambdaplayers/weapons/SlendytubbiesSFX's/knife/knife_hit"..math.random(1,4)..".wav", 110 )
+            --target:EmitSound( "lambdaplayers/weapons/SlendytubbiesSFX's/knife/knife_hit"..math.random(1,4)..".wav", 110 )
 
 
             return true

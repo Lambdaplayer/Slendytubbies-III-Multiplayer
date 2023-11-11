@@ -40,7 +40,8 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         reloadanimspeed = 0.9,
         reloadsounds = { 
             { 0, "lambdaplayers/weapons/SlendytubbiesSFX's/mk16/mk16_magout.wav" },
-            { 0.6, "lambdaplayers/weapons/SlendytubbiesSFX's/mk16/mk16_magmove.wav" },
+            { 0.4, "lambdaplayers/weapons/SlendytubbiesSFX's/mk16/mk16_magmove.wav" },
+            { 1.0, "lambdaplayers/weapons/SlendytubbiesSFX's/mk16/mk16_magplace.wav" },
             { 1.2, "lambdaplayers/weapons/SlendytubbiesSFX's/mk16/mk16_magin.wav" }
         },
 --------------------------------------------
@@ -55,8 +56,8 @@ OnThink = function( lambda )
 		_LAMBDAPLAYERSWEAPONS["st_mk16"].damage = 16
         _LAMBDAPLAYERSWEAPONS["st_mk16"].spread = 0.125
 	else
-        _LAMBDAPLAYERSWEAPONS["st_mk16"].damage = 28
-        _LAMBDAPLAYERSWEAPONS["st_mk16"].spread = 0.2
+        _LAMBDAPLAYERSWEAPONS["st_mk16"].damage = 36
+        _LAMBDAPLAYERSWEAPONS["st_mk16"].spread = 0.1
 	end
 end,
 --------------------------------------------

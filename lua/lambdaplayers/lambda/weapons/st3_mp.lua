@@ -21,7 +21,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         rateoffire = 0.1,
         tracername = "st3_ogtracer",
         muzzleflash = 1,
-        shelleject = "RifleShellEject",
+        shelleject = "ShellEject",
         shelloffpos = Vector( 10, 0, 3 ),
         shelloffang = Angle( 0, -90, 0 ),
         attackanim = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2,

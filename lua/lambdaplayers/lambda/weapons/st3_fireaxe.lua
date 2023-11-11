@@ -28,6 +28,15 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         attacksnd = "lambdaplayers/weapons/SlendytubbiesSFX's/fireaxe/axe_hit.wav",
         hitsnd = "lambdaplayers/weapons/SlendytubbiesSFX's/fireaxe/st3_axe_swing.wav",
 
+        OnThink = function( lambda )
+            local balanceAdjustment = GetConVar("lambdaplayers_st3_balanceweps")
+
+            if balanceAdjustment:GetBool() then
+                _LAMBDAPLAYERSWEAPONS["st_fireaxe"].damage = 32
+            else
+                _LAMBDAPLAYERSWEAPONS["st_fireaxe"].damage = 39
+            end
+        end,
 
         OnDeploy = function( self, wepent )            
             wepent:EmitSound( "lambdaplayers/weapons/SlendytubbiesSFX's/onequip.wav", 60, 100, 1, CHAN_ITEM )

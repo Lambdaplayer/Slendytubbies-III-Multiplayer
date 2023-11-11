@@ -36,7 +36,7 @@ OnThink = function( lambda )
     if balanceAdjustment:GetBool() then
         _LAMBDAPLAYERSWEAPONS["st_shorty"].damage = 9
     else
-        _LAMBDAPLAYERSWEAPONS["st_shorty"].damage = 29
+        _LAMBDAPLAYERSWEAPONS["st_shorty"].damage = 38
     end
 end,
 --------------------------------------------------------

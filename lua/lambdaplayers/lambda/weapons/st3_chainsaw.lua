@@ -16,7 +16,8 @@ local function KillSounds( self )
     if self.IdleSound then self.IdleSound:Stop(); self.IdleSound = nil end
     if self.AttackSound then self.AttackSound:Stop(); self.AttackSound = nil end 
 end
---Chainsaw---
+--------RANGED WEAPONS--------
+------CHAINSAW-----------
 table.Merge( _LAMBDAPLAYERSWEAPONS, {
     st_chainsaw = {
         model = "models/lambdaplayers/weapons/st3/w_st3_chainsaw.mdl", --the model where is goes
@@ -31,6 +32,8 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         islethal = true,
 
         OnDeploy = function( self, wepent )
+            ParticleEffectAttach( "Rocket_Smoke", PATTACH_ABSORIGIN_FOLLOW, wepent, 0 )
+
             self.l_WeaponUseCooldown = CurTime() + 2.5
             wepent:EmitSound( "lambdaplayers/weapons/SlendytubbiesSFX's/Chainsaw/st3_pull_zip.wav", 70 )
 
@@ -106,6 +109,8 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         end,
 
         OnHolster = function( self, wepent )
+            LAMBDA_ST3:StopParticlesNamed( wepent, "Rocket_Smoke" )
+
             wepent.IsDeploying = nil
             wepent.AttackTime = nil
 

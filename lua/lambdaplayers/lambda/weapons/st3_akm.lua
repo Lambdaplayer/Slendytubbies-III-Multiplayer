@@ -30,8 +30,10 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         reloadanim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         reloadanimspeed = 0.9,
         reloadsounds = { 
+            { 0., "lambdaplayers/weapons/SlendytubbiesSFX's/Akm/st3_akm_release.wav" },
             { 0.3, "lambdaplayers/weapons/SlendytubbiesSFX's/Akm/st3_akm_magout.wav" },
-            { 0.9, "lambdaplayers/weapons/SlendytubbiesSFX's/Akm/st3_akm_magmove.wav" },
+            { 0.4, "lambdaplayers/weapons/SlendytubbiesSFX's/Akm/st3_akm_magmove.wav" },
+            { 0.9, "lambdaplayers/weapons/SlendytubbiesSFX's/Akm/st3_akm_magplace.wav"},
             { 1.0, "lambdaplayers/weapons/SlendytubbiesSFX's/Akm/st3_akm_magin.wav" },
             { 1.6, "lambdaplayers/weapons/SlendytubbiesSFX's/Akm/st3_akm_boltpull.wav" },
             { 2.1, "lambdaplayers/weapons/SlendytubbiesSFX's/Akm/st3_akm_boltforward.wav" }
@@ -52,7 +54,7 @@ OnThink = function( lambda )
         _LAMBDAPLAYERSWEAPONS["st_akm"].damage = 9
         _LAMBDAPLAYERSWEAPONS["st_akm"].spread = 0.125
     else
-        _LAMBDAPLAYERSWEAPONS["st_akm"].damage = 29
+        _LAMBDAPLAYERSWEAPONS["st_akm"].damage = 36
         _LAMBDAPLAYERSWEAPONS["st_akm"].spread = 0.4
     end
 end,
