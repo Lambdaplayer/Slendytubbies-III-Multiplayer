@@ -1,3 +1,4 @@
+local EffectData = EffectData
 local IsFirstTimePredicted = IsFirstTimePredicted
 local isfunction = isfunction
 local random = math.random
@@ -10,9 +11,6 @@ local string_find = string.find
 local string_Explode = string.Explode
 -----------------CONVARS--------------------
 CreateLambdaConvar( "lambdaplayers_st3_balanceweps", 0, true, false, false, "If the ST3 Weapons Should allowd to use the OG stats instead of vanilla? [The Damage are not Instakill]", 0, 1, { type = "Bool", name = "Rebalance Weapons", category = "[Lambda ST3]Weapons Stuff" } )
-CreateLambdaConvar( "lambdaplayers_st3_alternativekatana", 1, true, false, true, "If the Katana Should allowed to use the Game Wave's soundtrack instead of Bury The Light Theme?", 0, 1, { type = "Bool", name = "Alternative Katana snds", category = "[Lambda ST3]Weapons Stuff" } )
-CreateLambdaConvar( "lambdaplayers_st3_motivatedkatana", 1, true, false, true, "If Lambda Players are allowed to use Bury the light theme?", 0, 1, { type = "Bool", name = "Allow motivation", category = "[Lambda ST3]Weapons Stuff" } )
--------------------------------------------
 ----------------STUFF ---------------------
 LAMBDA_ST3 = LAMBDA_ST3 or {}
 
@@ -31,51 +29,6 @@ end
 function LAMBDA_ST3:IsValidCharacter( ent, alive )
     if alive == nil then alive = true end
     return ( ( ent:IsPlayer() or ent.IsLambdaPlayer ) and ( !alive or ent:Alive() ) or ( ent:IsNPC() or ent:IsNextBot() ) and ( !alive or ent:Health() > 0 ) )
-end
-
-function LAMBDA_ST3:Headshoot( target, effects, force )
-    if !IsValid( target ) then return end
-
-    if CLIENT and target.IsLambdaPlayer then
-        local ragdoll = target.ragdoll
-        if !IsValid( ragdoll ) then return end
-        target = ragdoll
-    end
-
-    local headBone = LAMBDA_ST3:GetEntityHeadBone( target )
-    if !headBone then return end
-
-    if effects then
-        target:EmitSound( ")player/headshot1.wav", nil, nil, nil, CHAN_STATIC )
-
-        local headPos, headAng = LAMBDA_ST3:GetBoneTransformation( target, headBone )
-        if ( CLIENT ) then
-
-            local damnyousourceengine = CreateClientside( "base_anim" )
-            damnyousourceengine:SetPos( headPos )
-            damnyousourceengine:SetAngles( headAng )
-            damnyousourceengine:SetParent( target )
-            damnyousourceengine:Spawn()
-            damnyousourceengine.Draw = emptyFunc
-
-            local bloodEffect = CreateParticleSystem( damnyousourceengine, "blood_advisor_puncture_withdraw", PATTACH_ABSORIGIN_FOLLOW, 0, vector_origin )
-            damnyousourceengine:LambdaHookTick( "FollowRagdollHead", function()
-                if !IsValid( bloodEffect ) or !IsValid( target ) then 
-                    damnyousourceengine:Remove()
-                    return true 
-                end
-    
-                headPos, headAng = LAMBDA_ST3:GetBoneTransformation( target, headBone )
-                if !headPos or !headAng then 
-                    damnyousourceengine:Remove()
-                    return true 
-                end
-    
-                damnyousourceengine:SetPos( headPos )
-                damnyousourceengine:SetAngles( headAng )
-            end )
-        end
-    end
 end
 
 function LAMBDA_ST3:RemapClamped( value, inMin, inMax, outMin, outMax )
