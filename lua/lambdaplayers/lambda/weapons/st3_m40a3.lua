@@ -6,14 +6,27 @@ local ipairs = ipairs
 local Effect = util.Effect
 local CurTime = CurTime
 local string_find = string.find
-local string_Explode = string.Explode
+local Rand = math.Rand
+local random = math.random
+local Rand = math.Rand
+------CRIT--------
+local critCallbackTbl = { damage = true, cooldown = true }
+local critBullet = {
+    Damage = 100,
+    Force = 100,
+    Spread = Vector( 0, 0, 0 ),
+    TracerName = "st3_snipertracer",
+    HullSize = 5
+}
+
+local MLGShot = CreateLambdaConvar("lambdaplayers_st3_allowmlgshot", 0, true, false, true, "Allows the LambdaPlayers to hit critical shots with the M40A3, making room for those MLG gamer moments", 0, 1, { type = "Bool", name = "M40A3 - Sniper Crit", category = "[Lambda ST3]Weapons Stuff" } )
 
 local scopedCallbackTbl = { damage = true, cooldown = true }
 local scopedBullet = {
-    Damage = 99,
-    Force = 10000,
+    Damage = 56,
+    Force = 100,
     Spread = Vector( 0, 0, 0 ),
-    TracerName = "st3_snipertracer", --ajajaja Machina tracer go brrrrrrrrrrr 
+    TracerName = "st3_ogtracer",
     HullSize = 5
 }
 
@@ -54,6 +67,9 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         --------------------------------
         headshotsfx = "player/headshot1.wav",
 
+        callback = function( wepent, target )
+        end,
+
         OnDeploy = function( self, wepent )
             wepent:EmitSound( "lambdaplayers/weapons/SlendytubbiesSFX's/onequip.wav", 70 )
             wepent.IsScopedIn = false
@@ -63,10 +79,27 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
             if LAMBDA_ST3:IsUnderwater(lambda) then wepent:EmitSound("lambdaplayers/weapons/SlendytubbiesSFX's/dryfire_rifle.wav") lambda.l_WeaponUseCooldown = CurTime() + 0.2 return end
             local wepdata = table.Copy(_LAMBDAPLAYERSWEAPONS["st_m40a3_sniper"])
 
+            if math.random(30) == 1 and GetConVar("lambdaplayers_st3_allowmlgshot"):GetBool() then
+
+                critBullet.Attacker = lambda
+                critBullet.IgnoreEntity = lambda
+                critBullet.Src = wepent:GetPos()
+                critBullet.Dir = ( target:WorldSpaceCenter() - critBullet.Src ):GetNormalized()
+
+                target:EmitSound( "lambdaplayers/weapons/SlendytubbiesSFX's/m40a3/bsmod/headshotdie" .. random( 1, 3 ) .. ".wav", nil, nil, 70 )
+                ParticleEffect("crit_text", target:EyePos() + (target:EyeAngles():Right() * 1) + (target:EyeAngles():Up() * 8) + (target:EyeAngles():Forward()*1), target:EyeAngles() )-- Requieres TF2 Content mounted
+                target:EmitSound("player/crit_hit"..math.Round(math.Rand(2,5))..".wav")   --Requieres TF2 Content Mounted
+                wepent:FireBullets( critBullet )
+
+                return ( critCallbackTbl )
+            end
+
             local scopedIn = wepent.IsScopedIn
             lambda.l_WeaponUseCooldown = CurTime() + ( scopedIn and Rand( 2.5, 3.5 ) or Rand( 1.25, 1.66 ) )
 
-            lambda:SimpleTimer( 0.6, function() 
+            lambda:SimpleTimer( 0.6, function()
+                local layerID = lambda:AddGesture(ACT_HL2MP_GESTURE_RELOAD_AR2, true)
+                lambda:SetLayerCycle(layerID, 0.5)
                 wepent:EmitSound( "lambdaplayers/weapons/SlendytubbiesSFX's/m40a3/st3_m40a3_boltback.wav" )
                 lambda:HandleShellEject( "RifleShellEject", shelloffpos, shelloffang ) 
             end )
@@ -80,7 +113,6 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
                 scopedBullet.Src = wepent:GetPos()
                 scopedBullet.Dir = ( target:WorldSpaceCenter() - scopedBullet.Src ):GetNormalized()
                 wepent:FireBullets( scopedBullet )
-                target:EmitSound( "player/headshot"..math.random(1,3)..'.wav', 90 )
             end
 
             return ( scopedIn and callbackTbl or scopedCallbackTbl )
