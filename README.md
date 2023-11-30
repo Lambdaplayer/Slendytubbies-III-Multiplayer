@@ -36,7 +36,7 @@ Currently Implements The Following Weapons:
 
 
 # -Origin Of The Weapon pack
-it started since starfrost made Custom Weapon For Zeta So i make the concept using painkiller's st3 models but later changing to the
+it started since starfrost made Custom Weapons Panel For Zeta Players So i decided to make the weapons using painkiller's st3 models but later changing to the
 W A L T E N Models after or before the release of Lambda Players i started making ST3 XIX and lately making the full pack of it
 
 # -Requierements
