@@ -35,11 +35,13 @@ Currently Implements The Following Weapons:
 ![gm_lambda_dev0037](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/abce2897-fab3-45c7-9149-735446f4a58b)
 
 
+# -Origin Of The Weapon pack
+it started since starfrost made Custom Weapon For Zeta So i make the concept using painkiller's st3 models but later changing to the
+W A L T E N Models after or before the release of Lambda Players i started making ST3 XIX and lately making the full pack of it
 
-# -Slendytubbies III TubbyCustard
-how The TubbyCustard works? On pressing E It Will You Give More Health
-![gm_lambda_dev0038](https://github.com/Lambdaplayer/Slendytubbies-III-Multiplayer/assets/140025609/cb371788-c809-4193-876f-4678c38ad02e)
-
+# -Requierements
+- TF2 Mounted for "Critical Hit!" and others
+- LambdaPlayers[Reborn/Yermash's ver]
 
 # -Convars
 - Rebalance Weapons
