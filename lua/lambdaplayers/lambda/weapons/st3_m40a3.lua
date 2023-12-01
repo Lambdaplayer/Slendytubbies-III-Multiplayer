@@ -15,11 +15,11 @@ local critBullet = {
     Damage = 100,
     Force = 100,
     Spread = Vector( 0, 0, 0 ),
-    TracerName = "st3_snipertracer",
+    TracerName = "tf2_dx_tracer",
     HullSize = 5
 }
 
-local MLGShot = CreateLambdaConvar("lambdaplayers_st3_allowmlgshot", 0, true, false, true, "Allows the LambdaPlayers to hit critical shots with the M40A3, making room for those MLG gamer moments", 0, 1, { type = "Bool", name = "M40A3 - Sniper Crit", category = "[Lambda ST3]Weapons Stuff" } )
+local MLGShot = CreateLambdaConvar("lambdaplayers_st3_allowmlgshot", 0, true, false, true, "Allows the LambdaPlayers to hit critical shots with the M40A3, making room for those MLG gamer moments", 0, 1, { type = "Bool", name = "M40A3 - Sniper Crit", category = "Slendytubbies Stuff" } )
 
 local scopedCallbackTbl = { damage = true, cooldown = true }
 local scopedBullet = {
@@ -79,7 +79,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
             if LAMBDA_ST3:IsUnderwater(lambda) then wepent:EmitSound("lambdaplayers/weapons/SlendytubbiesSFX's/dryfire_rifle.wav") lambda.l_WeaponUseCooldown = CurTime() + 0.2 return end
             local wepdata = table.Copy(_LAMBDAPLAYERSWEAPONS["st_m40a3_sniper"])
 
-            if math.random(30) == 1 and GetConVar("lambdaplayers_st3_allowmlgshot"):GetBool() then
+            if math.random(40) == 1 and GetConVar("lambdaplayers_st3_allowmlgshot"):GetBool() then
 
                 critBullet.Attacker = lambda
                 critBullet.IgnoreEntity = lambda

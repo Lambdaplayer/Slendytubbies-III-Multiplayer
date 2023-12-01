@@ -13,9 +13,9 @@ local Rand = math.Rand
 local bor = bit.bor
 local util_Effect = util.Effect
 
-local useBlockSounds = CreateLambdaConvar( "lambdaplayers_st3_blocksounds", 1, true, false, true, "Can The Katana Play Block Sounds on damage?", 0, 1, { type = "bool", name = "Katana - Block Zeta SFX's", category = "[Lambda ST3]Weapons Stuff" } )
-local useblockdmg = CreateLambdaConvar( "lambdaplayers_st3_katanablock", 1, true, false, true,  "Allow The Katana Can Reflect Bullets and melee weapons?", 0, 1, { type = "bool", name = "Katana - Block Damage", category = "[Lambda ST3]Weapons Stuff" } )
-local getHyped = CreateLambdaConvar( "lambdaplayers_st3_hypekatana", 1, true, false, true, "If a Lambda Player that equips the katana should play Soundtracks?", 0, 1, { type = "Bool", name = "Katana - Hype", category = "[Lambda ST3]Weapons Stuff" } )
+local useBlockSounds = CreateLambdaConvar( "lambdaplayers_st3_blocksounds", 1, true, false, true, "Can The Katana Play Block Sounds on damage?", 0, 1, { type = "Bool", name = "Katana - Block Zeta SFX's", category = "Slendytubbies Stuff" } )
+local useblockdmg = CreateLambdaConvar( "lambdaplayers_st3_katanablock", 1, true, false, true,  "Allow The Katana Can Reflect Bullets and melee weapons?", 0, 1, { type = "Bool", name = "Katana - Block Damage", category = "Slendytubbies Stuff" } )
+local getHyped = CreateLambdaConvar( "lambdaplayers_st3_hypekatana", 1, true, false, true, "If a Lambda Player that equips the katana should play Soundtracks?", 0, 1, { type = "Bool", name = "Katana - Hype", category = "Slendytubbies Stuff" } )
 
 local hypeSnds = {
     "lambdaplayers/weapons/SlendytubbiesSFX's/katana/st3_katana_hype1.mp3",
@@ -111,7 +111,7 @@ OnTakeDamage = function( self, wepent, dmginfo )
     effectdata:SetNormal( sparkForward )
     util.Effect( "cball_explode", effectdata, true, true ) --IT WORKS!!!!! FUCK YEAHHHHHHHH
 
-    dmginfo:ScaleDamage( 0.82 )
+    dmginfo:ScaleDamage(math.Rand(math.random(0.1,0.2),0.3))
     if !useBlockSounds:GetBool() then wepent:EmitSound( "physics/metal/metal_solid_impact_bullet4.wav" ) end
     if useBlockSounds:GetBool() then wepent:EmitSound( "lambdaplayers/weapons/SlendytubbiesSFX's/katana/katana_deflect_bullet".. random( 1, 3 ).. ".wav", 80 ) end
     self.l_WeaponUseCooldown = self.l_WeaponUseCooldown + Rand( 0.25, 0.33 )

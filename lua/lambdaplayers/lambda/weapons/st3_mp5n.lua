@@ -14,7 +14,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         -------------------------------------------
 		clip = 25,
         damage = 15,
-        spread = 0.2,
+        spread = 0.02,
         rateoffire = 0.1,
         tracername = "st3_ogtracer",
         muzzleflash = 1,
@@ -49,10 +49,10 @@ OnThink = function( lambda )
 			
 	if balanceAdjustment:GetBool() then
 		_LAMBDAPLAYERSWEAPONS["st_mp5n"].damage = 15
-        _LAMBDAPLAYERSWEAPONS["st_mp5n"].spread = 0.2
+        _LAMBDAPLAYERSWEAPONS["st_mp5n"].spread = 0.02
 		else
         _LAMBDAPLAYERSWEAPONS["st_mp5n"].damage = 29
-        _LAMBDAPLAYERSWEAPONS["st_mp5n"].spread = 0.4
+        _LAMBDAPLAYERSWEAPONS["st_mp5n"].spread = 0.2
 	end
 end,
 ---------------------------------------------------------

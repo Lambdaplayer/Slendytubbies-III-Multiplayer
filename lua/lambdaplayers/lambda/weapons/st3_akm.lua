@@ -55,7 +55,7 @@ OnThink = function( lambda )
         _LAMBDAPLAYERSWEAPONS["st_akm"].spread = 0.125
     else
         _LAMBDAPLAYERSWEAPONS["st_akm"].damage = 36
-        _LAMBDAPLAYERSWEAPONS["st_akm"].spread = 0.4
+        _LAMBDAPLAYERSWEAPONS["st_akm"].spread = 0.2
     end
 end,
 ----------------------------------------------------------------

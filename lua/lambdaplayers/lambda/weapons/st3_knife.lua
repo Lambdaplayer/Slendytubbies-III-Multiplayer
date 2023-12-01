@@ -1,4 +1,4 @@
-local backstabCvar = CreateLambdaConvar( "lambdaplayers_st3_knifebackstab", 1, true, false, true, "If Lambda Players should be allowed to use the backstab feature of the ST3 Knife?", 0, 1, { type = "Bool", name = "Allow ST3 Knife Backstab", category = "[Lambda ST3]Weapons Stuff" } )
+local backstabCvar = CreateLambdaConvar( "lambdaplayers_st3_knifebackstab", 1, true, false, true, "If Lambda Players should be allowed to use the backstab feature of the ST3 Knife?", 0, 1, { type = "Bool", name = "Allow ST3 Knife Backstab", category = "Slendytubbies Stuff" } )
 
 table.Merge( _LAMBDAPLAYERSWEAPONS, {
     st_knife = {
