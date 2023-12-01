@@ -22,7 +22,7 @@ local function BFX_Menu(panel)
 end
 
 hook.Add("PopulateToolMenu","BFX_Menu", function()
-	spawnmenu.AddToolMenuOption("Lambda Player","Lambda Player","[Lambda ST3]Weapons Stuff","Slendytubbies III Multiplayer Bullet FX","","",BFX_Menu)
+	spawnmenu.AddToolMenuOption("Lambda Player","Lambda Player","Slendytubbies Stuff","Slendytubbies III Tracer","","",BFX_Menu)
 end)
 end
 
