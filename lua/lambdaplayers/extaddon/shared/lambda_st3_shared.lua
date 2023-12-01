@@ -1,3 +1,38 @@
+local table_Empty = table.Empty
+local ScreenShake = util.ScreenShake
+local ents_Create = ents.Create
+local SafeRemoveEntityDelayed = SafeRemoveEntityDelayed
+local IsValid = IsValid
+local SimpleTimer = timer.Simple
+local max = math.max
+local min = math.min
+local band = bit.band
+local istable = istable
+local AngleRand = AngleRand
+local net = net
+local isfunction = isfunction
+local ipairs = ipairs
+local table_remove = table.remove
+local Rand = math.Rand
+local coroutine_yield = coroutine.yield
+local ParticleEffectAttach = ParticleEffectAttach
+local Clamp = math.Clamp
+local deg = math.deg
+local acos = math.acos
+local SpriteTrail = util.SpriteTrail
+local TraceHull = util.TraceHull
+local DamageInfo = DamageInfo
+local FrameTime = FrameTime
+local debugoverlay = debugoverlay
+local Round = math.Round
+local RandomPairs = RandomPairs
+local isvector = isvector
+local GetConVar = GetConVar
+local IsSinglePlayer = game.SinglePlayer
+local coroutine_wait = coroutine.wait
+local FindByClass = ents.FindByClass
+local pairs = pairs
+local table_Random = table.Random
 local EffectData = EffectData
 local IsFirstTimePredicted = IsFirstTimePredicted
 local isfunction = isfunction
@@ -10,7 +45,7 @@ local CurTime = CurTime
 local string_find = string.find
 local string_Explode = string.Explode
 -----------------CONVARS--------------------
-CreateLambdaConvar( "lambdaplayers_st3_balanceweps", 0, true, false, false, "If the ST3 Weapons Should allowd to use the OG stats instead of vanilla? [The Damage are not Instakill]", 0, 1, { type = "Bool", name = "Rebalance Weapons", category = "[Lambda ST3]Weapons Stuff" } )
+CreateLambdaConvar( "lambdaplayers_st3_balanceweps", 0, true, false, false, "If the ST3 Weapons Should allowd to use the OG stats instead of vanilla? [The Damage are not Instakill]", 0, 1, { type = "Bool", name = "Rebalance Weapons", category = "Slendytubbies Stuff" } )
 ----------------STUFF ---------------------
 LAMBDA_ST3 = LAMBDA_ST3 or {}
 
@@ -174,4 +209,6 @@ function LAMBDA_ST3:SpawnPickUp( self, pickUpType, spawnRate )
 	self:ContributeEntToLimit( entity, "Entity" )
 	table.insert( self.l_SpawnedEntities, 1, entity )
 end
------
+---------Zeta Player Katana Stuff--------
+function LAMBDA_ST3:JudgementCut( self, pos, owner )
+end
