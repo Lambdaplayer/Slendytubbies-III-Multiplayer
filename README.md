@@ -57,6 +57,7 @@ W A L T E N Models after or before the release of Lambda Players i started makin
 - ZeoWorks(Sean) Creating Slendytubbies III Multiplayer
 - W A L T E N Creating the Model textures and lua Weapons[TFA Base]
 - PainKiller67 Creating Beta/Dev Weapons
+- Ghost32311 Creating the Grenade Launcher Model
 - Male-07(me) Creating the addon And Everything incluid The Grenade Entity 
 ![lfe_devtest0001](https://github.com/Lambdaplayer/Lambdaplayer-Slendytubbies-3-Multiplayer-Weapons-Pack/assets/140025609/3466114d-c00f-4c50-9eee-af61bf5ca754)
 
