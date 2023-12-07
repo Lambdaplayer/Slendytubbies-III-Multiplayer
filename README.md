@@ -3,7 +3,9 @@ This add 19 Weapons For Lambda player note, this not &100 Accurate Or Some Weapo
 
 # -**MUST REQUIRES LAMBDA PLAYERS[Reborn] & TF2 CONTENT TO WORK**
 [Github]Lambdaplayers[Reborn]: https://github.com/Emana202/Lambda-Players
+
 LambdaPlayers[Reborn]: https://steamcommunity.com/sharedfiles/filedetails/?id=3058063563&searchtext=lambda+players
+
 TF2: https://store.steampowered.com/app/440/Team_Fortress_2/
 
 # -The Implemented Weapons
