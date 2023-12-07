@@ -1,8 +1,10 @@
 # [Lambdaplayers]Slendytubbies III Multiplayer Weapons Pack
 This add 19 Weapons For Lambda player note, this not &100 Accurate Or Some Weapons are not
 
-# -**MUST REQUIRES EMANA'S/YERMASH LAMBDA PLAYERS FORK**
-https://github.com/Emana202/Lambda-Players
+# -**MUST REQUIRES LAMBDA PLAYERS[Reborn] & TF2 CONTENT TO WORK**
+[Github]Lambdaplayers[Reborn]: https://github.com/Emana202/Lambda-Players
+LambdaPlayers[Reborn]: https://steamcommunity.com/sharedfiles/filedetails/?id=3058063563&searchtext=lambda+players
+TF2: https://store.steampowered.com/app/440/Team_Fortress_2/
 
 # -The Implemented Weapons
 Currently Implements The Following Weapons:
@@ -38,10 +40,6 @@ Currently Implements The Following Weapons:
 # -Origin Of The Weapon pack
 it started since starfrost made Custom Weapons Panel For Zeta Players So i decided to make the weapons using painkiller's st3 models but later changing to the
 W A L T E N Models after or before the release of Lambda Players i started making ST3 XIX and lately making the full pack of it
-
-# -Requierements
-- TF2 Mounted for "Critical Hit!" and others
-- LambdaPlayers[Reborn/Yermash's ver]
 
 # -Convars
 - Rebalance Weapons
